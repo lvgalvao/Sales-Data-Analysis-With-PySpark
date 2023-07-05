@@ -9,7 +9,7 @@ def save_df_to_csv(df, path):
     df.repartition(1).write.csv(f'{path}hello_world', header=True)
 
 
-def pipeline():
+def main():
     spark = SparkSession.builder.appName('HelloWorld').getOrCreate()
     df = create_hello_world_df(spark)
     df.show()
@@ -17,4 +17,4 @@ def pipeline():
 
 
 if __name__ == '__main__':
-    pipeline()
+    main()
