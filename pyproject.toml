@@ -28,3 +28,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
 lint = "blue . && isort ."
+docs = "mkdocs serve"
+test = "pytest test -vv && coverage report -m"
+post_test = "coverage html"
