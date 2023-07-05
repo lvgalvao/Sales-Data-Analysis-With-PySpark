@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "sales-data-analysis-with-pyspark"
+version = "0.1.0"
+description = ""
+authors = ["Luciano Filho <lvgalvaofilho@gmail.com>"]
+readme = "README.md"
+packages = [{include = "sales_data_analysis_with_pyspark"}]
+
+[tool.poetry.dependencies]
+python = "3.11.3"
+
+
+[tool.poetry.group.dev.dependencies]
+ipdb = "^0.13.13"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+blue = "^0.9.1"
+isort = "^5.12.0"
+taskipy = "^1.11.0"
+
+
+[tool.poetry.group.doc.dependencies]
+mkdocstrings-python = "^1.1.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+lint = "blue . && isort ."
