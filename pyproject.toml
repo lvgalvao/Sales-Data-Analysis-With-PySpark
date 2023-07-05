@@ -9,6 +9,8 @@ packages = [{include = "sales_data_analysis_with_pyspark"}]
 [tool.poetry.dependencies]
 python = "3.11.3"
 pyspark = "^3.4.1"
+faker = "^18.11.2"
+pandas = "^2.0.3"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -32,3 +34,4 @@ lint = "blue . && isort ."
 docs = "mkdocs serve"
 test = "pytest test -vv && coverage report -m"
 post_test = "coverage html"
+run = "poetry run python"
