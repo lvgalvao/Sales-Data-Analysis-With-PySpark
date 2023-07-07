@@ -1,51 +1,51 @@
 customer_id,customer_name,age,gender,city,join_date
-70535,Luiz Miguel Monteiro,71,F,Novaes,2022-08-10
-54106,Maria Julia Moura,41,F,da Costa dos Dourados,2018-09-19
-90285,Ana Clara Pires,30,M,da Rocha Paulista,2022-02-22
-7275,Laura das Neves,79,F,Ramos Grande,2023-03-14
-84542,Isis Moura,39,M,Moreira,2022-04-22
-8622,Maria Fernanda Pereira,38,M,da Mata Paulista,2018-10-14
-19706,Dr. Vinicius Campos,52,F,Almeida,2022-09-12
-84761,Miguel Farias,56,F,Freitas do Oeste,2019-05-02
-2278,Joana Fernandes,55,M,Rocha,2019-08-17
-85818,Sr. Danilo Silveira,70,M,Lopes,2021-06-11
-57641,Noah da Mota,51,F,Alves,2021-10-17
-24601,Dra. Julia Costa,29,M,Araújo,2020-10-11
-33558,Rafael Fogaça,58,M,Pereira de Minas,2022-10-03
-81001,Pietro Azevedo,63,F,Moreira da Mata,2018-08-20
-73607,Enrico Gonçalves,80,F,Pires,2019-01-31
-25291,Dr. Daniel da Mata,38,F,Novaes do Oeste,2022-04-08
-37204,Maria Vitória Lima,34,M,Moreira,2020-12-20
-51576,Bryan Nascimento,31,F,da Paz,2021-03-03
-86083,Stella Fogaça,72,M,da Luz de Campos,2023-01-08
-99109,Sofia da Cruz,54,M,Cavalcanti,2023-04-08
-72493,Dra. Luiza da Costa,45,M,Gomes do Norte,2020-09-17
-51364,Luigi Barros,44,F,Silva,2019-03-07
-19289,Danilo Campos,77,F,Viana Grande,2022-03-21
-62725,Luiza Duarte,46,M,Carvalho de Rezende,2023-01-24
-49692,Benício Cavalcanti,21,F,Castro de Cardoso,2021-08-26
-28079,Laura Lopes,79,F,Martins,2022-09-26
-93576,Levi Araújo,22,F,Duarte do Norte,2022-11-07
-4029,Davi Lucca Ribeiro,43,F,Freitas,2020-04-07
-23041,Cauã Nascimento,76,M,da Conceição de da Mata,2020-08-09
-80295,Isabella Martins,44,F,Ferreira Verde,2020-05-31
-23506,Thiago Fernandes,75,F,da Mota do Campo,2020-10-17
-39053,Raquel da Cruz,41,M,Pires,2022-08-15
-91186,Esther Fernandes,22,F,Vieira,2019-09-08
-20446,Paulo Azevedo,24,M,Duarte,2021-02-12
-45501,Melissa Barbosa,23,F,Farias do Amparo,2021-08-28
-96416,Dra. Isis Alves,37,F,Farias de Costa,2021-05-25
-70398,Dra. Natália Nascimento,79,F,Moura da Serra,2019-10-11
-76763,Luana das Neves,38,F,Campos de Almeida,2021-05-14
-78994,Maitê Moraes,26,F,Cardoso,2021-01-02
-90893,Carlos Eduardo Ribeiro,19,F,Moura da Mata,2021-03-29
-47532,Leonardo Pereira,75,M,Novaes,2019-09-06
-20222,Sophie Freitas,30,M,Peixoto Paulista,2020-12-16
-76437,Luiza Fogaça,57,M,Silva de Viana,2022-10-18
-33155,Brenda Castro,45,F,Campos,2022-12-15
-13372,Dra. Pietra Pires,60,M,Rodrigues das Flores,2019-04-11
-61731,Luiz Miguel Farias,46,F,Costa,2021-12-14
-4525,Carlos Eduardo da Cunha,43,M,Rezende,2021-11-05
-2457,Pedro Henrique da Mata,39,F,Moraes,2022-07-28
-14060,Luiz Fernando Santos,69,F,Freitas,2019-07-20
-86072,Mirella Aragão,60,F,Fernandes Grande,2019-03-21
+33807,Eduardo Azevedo,31,F,Silveira,2018-08-25
+89610,Dr. Bryan Cavalcanti,71,M,Cardoso,2021-10-22
+41018,Mariane Ferreira,23,F,Costa do Amparo,2020-01-02
+97265,Benjamin Rocha,59,M,da Mata de Barros,2019-03-07
+34388,Dr. João Lucas da Mota,60,M,Lima,2021-03-03
+83301,Francisco Gonçalves,52,F,da Cruz,2022-12-26
+79209,Sra. Mariana Moreira,48,F,Barbosa,2021-03-22
+11053,Sra. Stephany Fernandes,32,M,Cardoso,2022-11-13
+74348,Lorenzo Costela,28,F,Costela do Sul,2021-03-11
+70759,Noah Cardoso,58,M,Moreira do Galho,2019-06-11
+50477,Alícia Vieira,46,F,Farias,2019-01-29
+86151,Isabella Ramos,54,M,Alves,2019-12-25
+44705,Luiz Henrique Moura,39,F,Rezende,2023-03-24
+90413,Joana Rodrigues,63,M,Freitas,2023-04-11
+76703,Henrique Araújo,52,M,Silveira,2022-08-03
+16495,Cauê da Paz,27,M,Duarte Grande,2023-04-19
+3624,João Pedro Martins,35,M,Pereira do Amparo,2021-04-07
+25863,Thomas Moreira,66,F,da Mata de Ribeiro,2022-01-06
+38601,Rafael Duarte,76,F,Ramos de Goiás,2020-11-27
+85342,Thiago Pinto,74,F,Correia,2021-06-03
+68740,Sophie Santos,62,F,Cardoso,2023-05-17
+78274,Cecília Costa,18,M,Campos,2022-09-08
+18043,Vitor Hugo Cunha,21,M,Pinto,2019-01-31
+43976,Evelyn Jesus,78,M,Ramos Grande,2022-11-23
+48421,Bianca da Rocha,80,F,Freitas Alegre,2021-03-25
+14109,Bruno Duarte,66,F,Pereira,2021-12-11
+71885,Matheus Correia,46,M,Mendes de Minas,2019-01-02
+4815,Bruno Santos,62,F,Ramos,2019-11-06
+11183,Juan Santos,43,F,Rocha,2020-06-18
+3599,Augusto Araújo,51,F,Rocha,2021-11-11
+39107,Dra. Eloah Rocha,69,M,Sales da Prata,2019-12-16
+97904,Erick Carvalho,33,M,Martins,2018-10-11
+48500,Ana Clara Costela,25,F,da Cruz Paulista,2019-12-29
+45303,Dr. João Lucas Melo,60,M,Gomes,2021-02-15
+50908,Vitor Cardoso,27,M,Carvalho Paulista,2022-03-14
+21048,Bruna Nascimento,21,M,Nascimento da Serra,2023-02-24
+48906,Francisco da Costa,44,M,Ferreira Verde,2021-11-22
+46184,Murilo Novaes,23,M,Cavalcanti de Barros,2021-12-06
+72460,Isabelly Porto,54,F,Dias de Almeida,2022-01-03
+97294,Julia Novaes,28,M,Peixoto do Galho,2020-06-20
+85068,Dr. Augusto Moraes,37,F,Castro da Serra,2020-06-19
+58992,Theo Souza,54,M,Cardoso,2019-03-16
+12570,Helena Melo,63,M,Jesus Alegre,2019-10-17
+26465,João Guilherme Nunes,77,F,Barbosa,2018-08-08
+90450,Maria Cecília Porto,40,F,Santos das Pedras,2019-12-25
+36558,Caroline Moraes,74,F,Freitas,2020-06-02
+80157,Sra. Sophia Campos,76,M,Nunes,2019-09-24
+85434,Srta. Lorena Duarte,60,F,Araújo Alegre,2019-06-06
+18421,Elisa da Cruz,27,M,Fogaça,2018-10-17
+29704,Enzo Vieira,45,F,Pires,2020-09-19
