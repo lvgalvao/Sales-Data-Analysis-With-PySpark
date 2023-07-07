@@ -1,35 +1,73 @@
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, expr, to_date
 import os
 
-def pipeline():
-    # Create a SparkSession
-    spark = SparkSession.builder \
-        .appName("SalesDataPipeline") \
-        .getOrCreate()
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, count, sum
 
-    # Load the sales data CSV file
-    data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
-    sales_data_file = os.path.join(data_dir, 'sales_data.csv')
+# Inicia uma sessão Spark
+spark = SparkSession.builder.appName('salesAnalysis').getOrCreate()
 
-    sales_data = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(sales_data_file)
+# Define o caminho para a pasta de dados
+data_dir = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), '..', 'data'
+)
 
-    # Convert the 'date' column from string to date type
-    sales_data = sales_data.withColumn("date", to_date(col("date"), "yyyy-MM-dd"))
+# Carrega todos os arquivos CSV
+sales_df = spark.read.csv(
+    os.path.join(data_dir, 'sales_data.csv'), header=True, inferSchema=True
+)
+products_df = spark.read.csv(
+    os.path.join(data_dir, 'products_data.csv'), header=True, inferSchema=True
+)
+stores_df = spark.read.csv(
+    os.path.join(data_dir, 'stores_data.csv'), header=True, inferSchema=True
+)
+salespeople_df = spark.read.csv(
+    os.path.join(data_dir, 'salespeople_data.csv'),
+    header=True,
+    inferSchema=True,
+)
+customers_df = spark.read.csv(
+    os.path.join(data_dir, 'customers_data.csv'), header=True, inferSchema=True
+)
 
-    # Create a new column 'revenue' which is 'quantity' * 'price'
-    sales_data = sales_data.withColumn("revenue", expr("quantity * price"))
 
-    # Create a new DataFrame that aggregates the total revenue by store
-    total_revenue_by_store = sales_data.groupBy("store").sum("revenue")
+# Junta todos os dados em um único DataFrame
+df = (
+    sales_df.join(
+        products_df, sales_df.fk_product_id == products_df.product_id
+    )
+    .join(stores_df, sales_df.fk_store_id == stores_df.store_id)
+    .join(
+        salespeople_df,
+        sales_df.fk_salesperson_id == salespeople_df.salesperson_id,
+    )
+    .join(customers_df, sales_df.fk_customer_id == customers_df.customer_id)
+)
 
-    # Create a new DataFrame that aggregates the total revenue by salesperson
-    total_revenue_by_salesperson = sales_data.groupBy("salesperson").sum("revenue")
+# Análise de desempenho do vendedor
+salespeople_performance = df.groupBy('salesperson_name').agg(
+    sum('sales_amount').alias('total_sales'),
+    count('customer_id').alias('num_customers'),
+)
+salespeople_performance.show()
 
-    # Save the transformed DataFrames as Delta tables
-    sales_data.write.format("csv").mode("overwrite").option("header", "true").save("output/sales_data")
-    total_revenue_by_store.write.format("csv").mode("overwrite").option("header", "true").save("output/total_revenue_by_store")
-    total_revenue_by_salesperson.write.format("csv").mode("overwrite").option("header", "true").save("output/total_revenue_by_salesperson")
+# Análise de produtos
+product_analysis = df.groupBy('product_name').agg(
+    sum('sales_amount').alias('total_sales'),
+    count('customer_id').alias('num_customers'),
+)
+product_analysis.show()
 
-if __name__ == "__main__":
-    pipeline()
+# Análise de lojas
+store_analysis = df.groupBy('store_name').agg(
+    sum('sales_amount').alias('total_sales'),
+    count('customer_id').alias('num_customers'),
+)
+store_analysis.show()
+
+# Análise de clientes
+customer_analysis = df.groupBy('customer_name').agg(
+    sum('sales_amount').alias('total_sales'),
+    count('product_id').alias('num_products'),
+)
+customer_analysis.show()
