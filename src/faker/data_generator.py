@@ -59,9 +59,22 @@ def generate_products_data(dir_path='.', num_rows=10):
             writer.writerow(
                 {
                     'product_id': fake.unique.random_number(digits=5),
-                    'product_name': fake.catch_phrase(),
+                    'product_name': fake.random_element(
+                        elements=(
+                            'Smart TV Ultra HD',
+                            'Laptop Gamer',
+                            'Fones de Ouvido Bluetooth',
+                            'Câmera DSLR Profissional',
+                            'Console de Videogame',
+                            'Smartwatch com Monitor Cardíaco',
+                            'Roteador Wi-Fi de Alta Velocidade',
+                            'Caixa de Som Bluetooth Portátil',
+                            'Drone com Câmera HD',
+                            'Monitor Curvo para Jogos',
+                        )
+                    ),
                     'product_category': fake.random_element(
-                        elements=('Eletrônicos', 'Móveis', 'Alimentos')
+                        elements=('Eletrônicos', 'Eletrônicos Premium')
                     ),
                     'product_price': fake.pydecimal(
                         right_digits=2,
@@ -93,7 +106,7 @@ def generate_store_data(dir_path='.', num_rows=10):
                 {
                     'store_id': fake.unique.random_number(digits=5),
                     'store_name': fake.company(),
-                    'store_location': fake.city(),
+                    'store_location': fake.state(),
                     'store_type': fake.random_element(
                         elements=('Física', 'Online')
                     ),
