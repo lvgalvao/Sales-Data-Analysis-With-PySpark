@@ -12,6 +12,7 @@ faker = "^18.11.2"
 pandas = "^2.0.3"
 pyspark = "^3.4.1"
 delta = "^0.4.2"
+streamlit = "^1.24.0"
 
 
 [tool.poetry.group.dev.dependencies]
