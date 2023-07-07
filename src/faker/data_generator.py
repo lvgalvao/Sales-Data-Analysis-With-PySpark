@@ -135,7 +135,9 @@ def generate_sales_data(dir_path='.'):
     customers_df = pd.read_csv(os.path.join(dir_path, 'customers_data.csv'))
     products_df = pd.read_csv(os.path.join(dir_path, 'products_data.csv'))
     stores_df = pd.read_csv(os.path.join(dir_path, 'stores_data.csv'))
-    salespersons_df = pd.read_csv(os.path.join(dir_path, 'salespeople_data.csv'))
+    salespersons_df = pd.read_csv(
+        os.path.join(dir_path, 'salespeople_data.csv')
+    )
 
     # Initialize empty lists for each sales data column
     sales_id = []
@@ -153,24 +155,34 @@ def generate_sales_data(dir_path='.'):
         for _ in range(num_sales):
             sales_id.append(len(sales_id) + 1)
             customer_id.append(customers_df.at[i, 'customer_id'])
-            product_id.append(random.choice(products_df['product_id'].tolist()))
+            product_id.append(
+                random.choice(products_df['product_id'].tolist())
+            )
             store_id.append(random.choice(stores_df['store_id'].tolist()))
-            salesperson_id.append(random.choice(salespersons_df['salesperson_id'].tolist()))
+            salesperson_id.append(
+                random.choice(salespersons_df['salesperson_id'].tolist())
+            )
             quantity.append(random.randint(1, 3))
-            sales_date.append(fake.date_between(start_date='-1y', end_date='today').isoformat())
+            sales_date.append(
+                fake.date_between(
+                    start_date='-1y', end_date='today'
+                ).isoformat()
+            )
             sales_amount.append(random.uniform(10.0, 1000.0))
 
     # Create a DataFrame for the sales data
-    sales_df = pd.DataFrame({
-        'sales_id': sales_id,
-        'fk_customer_id': customer_id,
-        'fk_product_id': product_id,
-        'fk_store_id': store_id,
-        'fk_salesperson_id': salesperson_id,
-        'quantity': quantity,
-        'sales_date': sales_date,
-        'sales_amount': sales_amount
-    })
+    sales_df = pd.DataFrame(
+        {
+            'sales_id': sales_id,
+            'fk_customer_id': customer_id,
+            'fk_product_id': product_id,
+            'fk_store_id': store_id,
+            'fk_salesperson_id': salesperson_id,
+            'quantity': quantity,
+            'sales_date': sales_date,
+            'sales_amount': sales_amount,
+        }
+    )
 
     # Write the sales data to a CSV file
     sales_df.to_csv(os.path.join(dir_path, 'sales_data.csv'), index=False)
