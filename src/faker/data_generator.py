@@ -61,16 +61,16 @@ def generate_products_data(dir_path='.', num_rows=10):
                     'product_id': fake.unique.random_number(digits=5),
                     'product_name': fake.random_element(
                         elements=(
-                            'Smart TV Ultra HD',
+                            'Smart TV',
                             'Laptop Gamer',
-                            'Fones de Ouvido Bluetooth',
-                            'Câmera DSLR Profissional',
-                            'Console de Videogame',
-                            'Smartwatch com Monitor Cardíaco',
-                            'Roteador Wi-Fi de Alta Velocidade',
-                            'Caixa de Som Bluetooth Portátil',
-                            'Drone com Câmera HD',
-                            'Monitor Curvo para Jogos',
+                            'Fones de Ouvido',
+                            'Câmera DSLR',
+                            'Videogame',
+                            'Smartwatch',
+                            'Roteador Wi-Fie',
+                            'Caixa de Som',
+                            'Drone',
+                            'Monitor',
                         )
                     ),
                     'product_category': fake.random_element(
